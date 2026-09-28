@@ -427,12 +427,11 @@ async function submitRequest() {
         totalPrice:
             document.getElementById("totalPrice").textContent,
 
-        advance:
-            document.getElementById("advancePrice").textContent,
+       advancePrice:
+    document.getElementById("advancePrice").textContent,
 
-        remaining:
-            document.getElementById("remainingPrice").textContent
-
+remainingPrice:
+    document.getElementById("remainingPrice").textContent
     };
 
 
