@@ -21,6 +21,7 @@ def get_db():
 
 
 def init_db():
+    
     conn = get_db()
 
     conn.execute("""
@@ -47,6 +48,7 @@ def init_db():
 
     conn.commit()
     conn.close()
+    init_db()
 
     
     
