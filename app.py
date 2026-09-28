@@ -21,7 +21,6 @@ def get_db():
 
 
 def init_db():
-    
     conn = get_db()
 
     conn.execute("""
@@ -48,9 +47,6 @@ def init_db():
 
     conn.commit()
     conn.close()
-    init_db()
-
-    
     
     # ---------------- ADMIN LOGIN ----------------
 
@@ -886,10 +882,12 @@ function searchRequests() {{
 """
 
 
+# Initialize database when app starts
+init_db()
+
 # ---------------- START SERVER ----------------
 
 if __name__ == "__main__":
-
     init_db()
 
     print("PPTWALLAH Server Started")
@@ -899,3 +897,4 @@ if __name__ == "__main__":
         host="127.0.0.1",
         port=5000
     )
+    
