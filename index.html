@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PPTWALLAH| Professional Presentations</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+<style>
+.upi-payment-box {
+    margin: 25px auto;
+    padding: 24px;
+    max-width: 560px;
+    border: 1px solid rgba(220,151,80,0.35);
+    border-radius: 16px;
+    background: rgba(220,151,80,0.08);
+}
+
+.upi-payment-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.upi-payment-box p {
+    line-height: 1.6;
+}
+
+.upi-details {
+    margin: 15px 0;
+    padding: 13px;
+    border-radius: 10px;
+    background: rgba(20,26,45,0.35);
+    line-height: 1.8;
+}
+
+.upi-qr-wrap {
+    text-align: center;
+    margin: 18px 0;
+}
+
+.qr-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#upiQr {
+    width: 210px;
+    height: 210px;
+    max-width: 100%;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+}
+
+.qr-note,
+.payment-help {
+    display: block;
+    margin-top: 12px;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+.upi-paid-btn {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px 20px;
+    border: 1px solid rgba(220,151,80,0.5);
+    border-radius: 10px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+}
+</style>
+
+</head>
+
+<body>
+
+    <!-- Background Decoration -->
+    <div class="bg-circle circle-one"></div>
+    <div class="bg-circle circle-two"></div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>PPT</span> WALLAH
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#how">How It Works</a>
+            <a href="#plans">Plans</a>
+        </div>
+
+        <button class="nav-btn" onclick="startCreating()">
+            Create PPT
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                PROFESSIONAL PRESENTATION SERVICE
+            </p>
+
+            <h1>
+                Your Idea.<br>
+                <span>Our Presentation.</span>
+            </h1>
+
+            <p class="hero-text">
+                Tell us what you need and we'll create a
+                professional, well-designed PPT according
+                to your requirements.
+            </p>
+
+            <button class="main-btn" onclick="startCreating()">
+                Create My PPT
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="preview-top">
+                <span>YOUR PRESENTATION</span>
+                <span>01 / 10</span>
+            </div>
+
+            <div class="preview-content">
+
+                <div class="preview-orange"></div>
+
+                <h2>
+                    Modern<br>
+                    Presentation
+                </h2>
+
+                <p>
+                    Designed specially for your topic
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREATOR -->
+
+    <section class="creator-section" id="creator">
+
+        <div class="section-heading">
+
+            <p>LET'S CREATE</p>
+
+            <h2>
+                Create Your <span>PPT</span>
+            </h2>
+
+            <div class="progress-container">
+
+                <div class="progress-line">
+                    <div id="progressBar"></div>
+                </div>
+
+                <div class="progress-steps">
+
+                    <div class="progress-step active" id="stepCircle1">
+                        1
+                    </div>
+
+                    <div class="progress-step" id="stepCircle2">
+                        2
+                    </div>
+
+                    <div class="progress-step" id="stepCircle3">
+                        3
+                    </div>
+
+                    <div class="progress-step" id="stepCircle4">
+                        4
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 1 -->
+
+        <div class="form-card step active-step" id="step1">
+
+            <div class="step-title">
+                <span>01</span>
+
+                <div>
+                    <h3>Tell us about yourself</h3>
+                    <p>We'll use these details to contact you.</p>
+                </div>
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email Address *</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                    >
+
+                </div>
+
+
+                <div class="input-group full">
+
+                    <label>WhatsApp / Mobile Number *</label>
+
+                    <div class="phone-input">
+
+                        <span>+91</span>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            maxlength="10"
+                            placeholder="10 digit mobile number"
+                        >
+
+                    </div>
+
+                    <small>
+                        Your number will only be used for PPT-related communication.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button class="next-btn" onclick="nextStep(1)">
+                    Continue
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 2 -->
+
+        <div class="form-card step" id="step2">
+
+            <div class="step-title">
+
+                <span>02</span>
+
+                <div>
+                    <h3>Tell us about your PPT</h3>
+                    <p>Choose exactly what you want.</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Subject *</label>
+
+                    <select id="subject">
+
+                        <option value="">Select Subject</option>
+
+                        <option>Computer Science</option>
+                        <option>Science</option>
+                        <option>Mathematics</option>
+                        <option>English</option>
+                        <option>History</option>
+                        <option>Geography</option>
+                        <option>Business Studies</option>
+                        <option>Disaster Management</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Presentation Topic *</label>
+
+                    <input
+                        type="text"
+                        id="topic"
+                        placeholder="e.g. Artificial Intelligence"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Number of Slides *</label>
+
+                    <select id="slides" onchange="updatePrice()">
+
+                        <option value="5">5 Slides</option>
+                        <option value="10">10 Slides</option>
+                        <option value="15">15 Slides</option>
+                        <option value="20">20 Slides</option>
+                        <option value="25">25 Slides</option>
+                        <option value="30">30 Slides</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Language *</label>
+
+                    <select id="language">
+
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Hinglish</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Presentation Style *</label>
+
+                    <select id="style">
+
+                        <option value="">Select Style</option>
+
+                        <option>Modern & Minimal</option>
+                        <option>Professional</option>
+                        <option>Academic</option>
+                        <option>Creative</option>
+                        <option>Dark & Premium</option>
+                        <option>Corporate</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Images / Graphics</label>
+
+                    <select id="graphics">
+
+                        <option>Basic Images</option>
+                        <option>Images + Icons</option>
+                        <option>Advanced Graphics</option>
+                        <option>Infographics</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group full">
+
+                    <label>Additional Requirements</label>
+
+                    <textarea
+                        id="requirements"
+                        placeholder="Tell us anything else you want in your PPT..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button class="back-btn" onclick="previousStep(2)">
+                    ← Back
+                </button>
+
+                <button class="next-btn" onclick="nextStep(2)">
+                    Choose Plan
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 3 -->
+
+        <div class="form-card step" id="step3">
+
+            <div class="step-title">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Choose your plan</h3>
+                    <p>
+                        Select the level of presentation you need.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="plans" id="plans">
+
+
+                <!-- NORMAL -->
+
+                <div
+                    class="plan-card selected"
+                    data-plan="Normal"
+                    data-price="99"
+                    onclick="selectPlan(this)"
+                >
+
+                    <div class="plan-top">
+
+                        <h3>Normal</h3>
+
+                        <div class="check">
+                            ✓
+                        </div>
+
+                    </div>
+
+                    <p class="plan-description">
+                        Simple and clean presentation for
+                        basic academic requirements.
+                    </p>
+
+                    <div class="price">
+                        ₹99
+                    </div>
+
+                    <ul>
+                        <li>✓ Clean design</li>
+                        <li>✓ Basic images</li>
+                        <li>✓ Topic-based content</li>
+                        <li>✓ PPTX file</li>
+                    </ul>
+
+                </div>
+
+
+
+                <!-- ADVANCED -->
+
+                <div
+                    class="plan-card"
+                    data-plan="Advanced"
+                    data-price="199"
+                    onclick="selectPlan(this)"
+                >
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+                    <div class="plan-top">
+
+                        <h3>Advanced</h3>
+
+                        <div class="check">
+                            ✓
+                        </div>
+
+                    </div>
+
+                    <p class="plan-description">
+                        More detailed presentation with
+                        better visuals and structure.
+                    </p>
+
+                    <div class="price">
+                        ₹199
+                    </div>
+
+                    <ul>
+                        <li>✓ Premium design</li>
+                        <li>✓ Images + icons</li>
+                        <li>✓ Better content</li>
+                        <li>✓ Infographics</li>
+                    </ul>
+
+                </div>
+
+
+
+                <!-- PREMIUM -->
+
+                <div
+                    class="plan-card"
+                    data-plan="Premium"
+                    data-price="399"
+                    onclick="selectPlan(this)"
+                >
+
+                    <div class="plan-top">
+
+                        <h3>Premium</h3>
+
+                        <div class="check">
+                            ✓
+                        </div>
+
+                    </div>
+
+                    <p class="plan-description">
+                        Highly detailed presentation for
+                        important projects and seminars.
+                    </p>
+
+                    <div class="price">
+                        ₹399
+                    </div>
+
+                    <ul>
+                        <li>✓ Premium design</li>
+                        <li>✓ Advanced graphics</li>
+                        <li>✓ Detailed research</li>
+                        <li>✓ Infographics</li>
+                        <li>✓ Priority work</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRICE SUMMARY -->
+
+            <div class="price-summary">
+
+                <div>
+
+                    <span>Selected Plan</span>
+
+                    <strong id="selectedPlan">
+                        Normal
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>Total Price</span>
+
+                    <strong id="totalPrice">
+                        ₹99
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>30% Advance</span>
+
+                    <strong class="advance" id="advancePrice">
+                        ₹30
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>Remaining 70%</span>
+
+                    <strong id="remainingPrice">
+                        ₹69
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-note">
+
+                <span>💳</span>
+
+                <p>
+                    <strong>Payment Policy</strong><br>
+
+                    30% advance payment is required before
+                    work starts. The remaining 70% is payable
+                    after the PPT is completed.
+                </p>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button class="back-btn" onclick="previousStep(3)">
+                    ← Back
+                </button>
+
+                <button class="next-btn" onclick="nextStep(3)">
+                    Review Request
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 4 -->
+
+        <div class="form-card step" id="step4">
+
+            <div class="step-title">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Review your request</h3>
+                    <p>Check everything before submitting.</p>
+                </div>
+
+            </div>
+
+
+            <div class="review-box">
+
+                <div class="review-item">
+
+                    <span>Name</span>
+                    <strong id="reviewName">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Email</span>
+                    <strong id="reviewEmail">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>WhatsApp</span>
+                    <strong id="reviewMobile">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Subject</span>
+                    <strong id="reviewSubject">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Topic</span>
+                    <strong id="reviewTopic">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Slides</span>
+                    <strong id="reviewSlides">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Language</span>
+                    <strong id="reviewLanguage">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Style</span>
+                    <strong id="reviewStyle">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Plan</span>
+                    <strong id="reviewPlan">-</strong>
+
+                </div>
+
+                <div class="review-item">
+
+                    <span>Total</span>
+                    <strong id="reviewPrice">-</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="delivery-info">
+
+                <div>📱</div>
+
+                <div>
+
+                    <strong>How will you receive your PPT?</strong>
+
+                    <p>
+                        After your PPT is completed, we will
+                        contact you on WhatsApp and send the
+                        final PPT file there.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <label class="terms">
+
+                <input type="checkbox" id="agree">
+
+                <span>
+                    I confirm that the information provided
+                    above is correct and I agree to the
+                    payment terms.
+                </span>
+
+            </label>
+
+
+            <div class="button-row">
+
+                <button class="back-btn" onclick="previousStep(4)">
+                    ← Back
+                </button>
+
+                <button class="submit-btn" onclick="submitRequest()">
+                    Submit Request
+                    ✓
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUCCESS -->
+
+        <div class="success-card" id="successCard">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Request Received!
+            </h2>
+
+            <p>
+                Your PPT request has been submitted successfully.
+            </p>
+
+            <div class="success-details">
+
+                <p>
+                    We will review your requirements and
+                    contact you on WhatsApp regarding the
+                    30% advance payment and final details.
+                </p>
+
+            </div>
+
+
+            
+            <div class="upi-payment-box" id="upiPaymentBox">
+
+                <div class="upi-payment-title">
+                    💳 Pay 30% Advance
+                </div>
+
+                <p>
+                    Advance amount:
+                    <strong id="successAdvanceAmount">₹0</strong>
+                </p>
+
+                <div class="upi-details">
+                    <div><strong>UPI ID:</strong> vineetkandpal456@oksbi</div>
+                    <div><strong>Payee:</strong> PPT Studio</div>
+                </div>
+
+                <div class="upi-qr-wrap" id="upiQrWrap">
+                    <p class="qr-title">Scan this QR with Google Pay / any UPI app</p>
+                    <img id="upiQr" alt="UPI Payment QR Code">
+                    <small class="qr-note">
+                        QR is generated from your UPI ID and the exact advance amount.
+                    </small>
+                </div>
+
+                <button
+                    class="main-btn"
+                    type="button"
+                    onclick="payAdvanceUPI()"
+                >
+                    📱 Pay Advance via UPI
+                </button>
+
+                <button
+                    class="upi-paid-btn"
+                    id="upiPaidButton"
+                    type="button"
+                    onclick="confirmUPIPayment()"
+                    style="display:none;"
+                >
+                    ✓ I Have Paid
+                </button>
+
+                <small class="payment-help">
+                    After completing payment, click <strong>I Have Paid</strong>
+                    and send the payment screenshot/UTR on WhatsApp.
+                </small>
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="location.reload()"
+            >
+                Create Another PPT
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-section" id="how">
+
+        <p class="section-label">
+            SIMPLE PROCESS
+        </p>
+
+        <h2>
+            How It <span>Works</span>
+        </h2>
+
+
+        <div class="how-grid">
+
+            <div class="how-card">
+
+                <div>01</div>
+
+                <h3>
+                    Submit Requirements
+                </h3>
+
+                <p>
+                    Tell us your subject, topic,
+                    slides and preferred style.
+                </p>
+
+            </div>
+
+
+           <div class="how-card">
+
+    <div>02</div>
+
+    <h3>
+        Confirm & Pay
+    </h3>
+
+    <p>
+        We contact you on WhatsApp to confirm
+        your requirements. A <strong>30% advance
+        payment</strong> is required before we
+        start creating your PPT. The remaining
+        <strong>70% is paid after completion.</strong>
+    </p>
+
+</div>
+
+
+            <div class="how-card">
+
+                <div>03</div>
+
+                <h3>
+                    We Create
+                </h3>
+
+                <p>
+                    Our team prepares your
+                    presentation according to your needs.
+                </p>
+
+            </div>
+
+
+            <div class="how-card">
+
+                <div>04</div>
+
+                <h3>
+                    Get Your PPT
+                </h3>
+
+                <p>
+                    After completion, receive your
+                    final PPT through WhatsApp.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <span>PPT</span> Studio
+        </div>
+
+        <p>
+            Professional presentations made for your ideas.
+        </p>
+
+        <p class="copyright">
+            © 2026 PPT Studio. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+<script>
+const PPT_STUDIO_UPI = "vineetkandpal456@oksbi";
+
+function getAdvanceAmountNumber() {
+    const el = document.getElementById("advancePrice");
+
+    if (!el) return 0;
+
+    const value = el.textContent
+        .replace(/[₹,\s]/g, "")
+        .trim();
+
+    const amount = Number(value);
+
+    return Number.isFinite(amount) ? Math.ceil(amount) : 0;
+}
+
+function buildUPIUrl() {
+    const amount = getAdvanceAmountNumber();
+
+    return (
+        "upi://pay" +
+        "?pa=" + encodeURIComponent(PPT_STUDIO_UPI) +
+        "&pn=" + encodeURIComponent("PPT Studio") +
+        "&am=" + encodeURIComponent(amount.toFixed(2)) +
+        "&cu=INR" +
+        "&tn=" + encodeURIComponent("PPT Studio 30% Advance")
+    );
+}
+
+function payAdvanceUPI() {
+    const amount = getAdvanceAmountNumber();
+
+    if (!amount || amount <= 0) {
+        alert("Advance amount could not be calculated.");
+        return;
+    }
+
+    // On phones with a UPI app, this launches the UPI intent.
+    window.location.href = buildUPIUrl();
+
+    // Show the confirmation button after giving the UPI app time to open.
+    setTimeout(function () {
+        const paidButton = document.getElementById("upiPaidButton");
+        if (paidButton) {
+            paidButton.style.display = "block";
+        }
+    }, 1200);
+}
+
+function generateUPIQR() {
+    const amount = getAdvanceAmountNumber();
+    const qr = document.getElementById("upiQr");
+
+    if (!qr || !amount) return;
+
+    const upiUrl = buildUPIUrl();
+
+    // QR image is generated locally through a public QR image endpoint.
+    // No bank credentials or UPI PIN are sent.
+    qr.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=420x420&data=" +
+        encodeURIComponent(upiUrl);
+}
+
+function confirmUPIPayment() {
+    const amount = getAdvanceAmountNumber();
+
+    const message =
+        "Hello PPT Studio, I have paid the 30% advance for my PPT request." +
+        "\n\nAdvance Amount: ₹" + amount +
+        "\n\nI will share the payment screenshot/UTR for confirmation.";
+
+    window.open(
+        "https://wa.me/?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+}
+
+function updateSuccessAdvanceAmount() {
+    const source = document.getElementById("advancePrice");
+    const target = document.getElementById("successAdvanceAmount");
+
+    if (source && target) {
+        target.textContent = source.textContent.trim();
+    }
+
+    generateUPIQR();
+}
+
+document.addEventListener("DOMContentLoaded", updateSuccessAdvanceAmount);
+</script>
+<script>
+function searchRequests() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let rows = document.querySelectorAll("tbody tr");
+
+    rows.forEach(row => {
+        row.style.display =
+            row.innerText.toLowerCase().includes(input)
+            ? ""
+            : "none";
+    });
+}
+</script>
+</body>
+</html>
